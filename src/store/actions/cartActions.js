@@ -3,7 +3,7 @@ export const REMOVE_FROM_CART = "REMOVE_FROM_CART"
 
 
 
-export function addToCart(product){
+export default function addToCart(product){
     return{
         type: ADD_TO_CART,
         payload: product
