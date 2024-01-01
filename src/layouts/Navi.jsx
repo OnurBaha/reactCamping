@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Button, Container, Menu } from 'semantic-ui-react'
+import {  Container, Menu } from 'semantic-ui-react'
 import CartSummary from './CartSummary'
 import SignedOut from './SignedOut'
 import SignedIn from './SignedIn'

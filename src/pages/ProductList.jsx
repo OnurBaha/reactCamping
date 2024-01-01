@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import { Table, Icon, Label, Menu, Button } from 'semantic-ui-react'
+import { Table, Icon, Menu, Button } from 'semantic-ui-react'
 import ProductService from '../services/productService'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import addToCart from '../store/actions/cartActions'
+import { toast } from 'react-toastify'
 
 
 export default function ProductList() {
@@ -20,6 +21,7 @@ export default function ProductList() {
 
     const handleAddToCart = (product) => {
         dispatch(addToCart(product))
+        toast.success(`${product.title} Sepete Eklendi..!`)
     }
     
 
