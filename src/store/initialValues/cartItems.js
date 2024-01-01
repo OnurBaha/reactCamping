@@ -1,1 +1,1 @@
-export const cartItems = [{quantity:1, product:{title:"HP Laptop "}}]
+export const cartItems = []
