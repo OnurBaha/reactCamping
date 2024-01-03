@@ -1,7 +1,8 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik'
+import { Form, Formik } from 'formik'
 import React from 'react'
-import { Button, FormField, Label } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 import * as Yup from 'yup'
+import KodlamaIoTextInput from '../utilities/customFormControls/KodlamaIoTextInput'
 
 export default function ProductAdd() {
 
@@ -20,18 +21,9 @@ export default function ProductAdd() {
                 }}
             >
                 <Form className='ui form'>
-                    <FormField >
-                        <Field name='title' placeholder='Ürün Adi'></Field>
-                        <ErrorMessage name='title' render={error=>
-                            <Label pointing basic color='red' content={error}></Label>
-                        }></ErrorMessage>
-                    </FormField>
-                    <FormField >
-                       <Field name='price' placeholder='Ürün Fiyati'></Field>
-                       <ErrorMessage name='price' render={error=>
-                            <Label pointing basic color='red' content={error}></Label>
-                        }></ErrorMessage>
-                    </FormField>
+                    <KodlamaIoTextInput name='title' placeholder='Ürün Adi'/>
+                    <KodlamaIoTextInput name='price' placeholder='Ürün Fiyati'/>
+                    
                     <Button color='green' type='submit'>Ekle</Button>
                 </Form>
             </Formik>
